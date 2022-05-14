@@ -22,12 +22,21 @@ function App() {
 
   const [value, setValue] = useState("Hello");
 
+  const rendomset = () => {
+    const arr = ["피카츄", "라이츄", "파이리", "꼬북이", "버터플", "야도란"]
+
+    const ran = Math.random() * arr.length;
+    const _ran = Math.floor(ran);
+
+    setValue(arr[_ran]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{value}</p>
-        <button onClick={() => setValue("World")}>CLICK</button>
+        <button onClick={() => rendomset()}>CLICK</button>
         <a
           className="App-link"
           href="https://reactjs.org"
